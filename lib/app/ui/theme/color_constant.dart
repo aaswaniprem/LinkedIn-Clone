@@ -11,6 +11,18 @@ const Color grey1 = Color(0xffF2F2F2);
 //for celebrates
 const Color grey2 = Color(0xff666666);
 
+//backgroundcolor
+const Color bgcolor = Color(0xffF3F2EE);
+
+//divider color
+const Color dividerColor = Color(0xffEBEBEB);
+
+const Color borderColor = Color(0xffEBEBEB);
+
+//green color
+const Color greenColor = Color(0xff047642);
+
+const reationColor = Color(0xff6E6E6E);
 //for frient comment text
 const Color black1 = Color(0xff191919);
 

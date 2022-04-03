@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: Routes.landing,
       theme: ThemeData(
-          primaryColor: Colors.blue,
+          primaryColor: Colors.black,
           visualDensity: VisualDensity.adaptivePlatformDensity),
       // defaultTransition: Transition.fade,
       // initialBinding: HomeBinding(),

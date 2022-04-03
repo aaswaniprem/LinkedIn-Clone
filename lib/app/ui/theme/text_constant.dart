@@ -10,6 +10,22 @@ TextStyle person_desc = GoogleFonts.montserrat(
   fontSize: 15.0,
 );
 
+//workhead
+TextStyle workHead =
+    GoogleFonts.robotoSlab(fontWeight: FontWeight.bold, fontSize: 17.0);
+
+// extrasmalltext
+TextStyle extra_small =
+    GoogleFonts.montserrat(fontSize: 14.0, color: Color(0xff6E6E6E));
+
+//boldhead
+TextStyle boldText =
+    GoogleFonts.lato(fontWeight: FontWeight.w600, fontSize: 19.0);
+
+//blue text
+TextStyle bluetext =
+    GoogleFonts.lato(color: blue, fontWeight: FontWeight.bold, fontSize: 14.0);
+
 const lpadding = 13.0;
 
 //show more text

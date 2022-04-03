@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:linkedin_clone/app/data/models/invitationsmodel.dart';
 import 'package:linkedin_clone/app/ui/global_widgets/network_item.dart';
+import 'package:linkedin_clone/app/ui/pages/recommendation_page/recommendation_page.dart';
 import 'package:linkedin_clone/app/ui/theme/text_constant.dart';
 
 class List4 extends StatelessWidget {
@@ -46,14 +48,23 @@ class List4 extends StatelessWidget {
                   crossAxisSpacing: 8,
                   mainAxisSpacing: 10,
                   itemBuilder: (context, index) {
-                    return NetworkItem();
+                    return NetworkItem(
+                        image: invitationUsers[index].imageUrl,
+                        name: invitationUsers[index].name,
+                        profession: invitationUsers[index].profession,
+                        mutual: invitationUsers[index].mututalFriends);
                   },
                   staggeredTileBuilder: (index) => StaggeredTile.fit(1),
                 ),
               ),
-              Text(
-                "See all",
-                style: show_more,
+              GestureDetector(
+                onTap: () {
+                  Get.to(RecommendationPage());
+                },
+                child: Text(
+                  "See all",
+                  style: show_more,
+                ),
               ),
               SizedBox(
                 height: 20.0,
@@ -61,8 +72,6 @@ class List4 extends StatelessWidget {
             ],
           ),
         ),
-      
-      
         SizedBox(
           height: 20.0,
         ),

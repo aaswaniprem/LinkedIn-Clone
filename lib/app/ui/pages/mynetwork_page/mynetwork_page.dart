@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:linkedin_clone/app/data/models/invitationsmodel.dart';
 import 'package:linkedin_clone/app/ui/global_widgets/4list.dart';
 import 'package:linkedin_clone/app/ui/global_widgets/network_item.dart';
+import 'package:linkedin_clone/app/ui/pages/invitation_page/invitation_page.dart';
+import 'package:linkedin_clone/app/ui/pages/managenetwork_page/managenetwork_page.dart';
+import 'package:linkedin_clone/app/ui/pages/mynetwork_page/widgets/invitation_receive_tile.dart';
 import 'package:linkedin_clone/app/ui/theme/color_constant.dart';
 import 'package:linkedin_clone/app/ui/theme/text_constant.dart';
 
@@ -16,26 +20,31 @@ class MyNetworkPage extends GetView<MyNetworkController> {
       backgroundColor: bg,
       body: ListView(
         children: [
-          Container(
-            height: 46.0,
-            color: Colors.white,
-            child: Padding(
-              padding: const EdgeInsets.only(left: 13.0, right: 13.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "Manage my network",
-                    style: GoogleFonts.lato(
-                        color: blue,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 17.0),
-                  ),
-                  Icon(
-                    Icons.chevron_right,
-                    color: grey2,
-                  )
-                ],
+          GestureDetector(
+            onTap: () {
+              Get.to(ManageNetworkPage());
+            },
+            child: Container(
+              height: 46.0,
+              color: Colors.white,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 13.0, right: 13.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Manage my network",
+                      style: GoogleFonts.lato(
+                          color: blue,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 17.0),
+                    ),
+                    Icon(
+                      Icons.chevron_right,
+                      color: grey2,
+                    )
+                  ],
+                ),
               ),
             ),
           ),
@@ -70,254 +79,35 @@ class MyNetworkPage extends GetView<MyNetworkController> {
             thickness: 2.0,
             color: grey1,
           ),
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border(
-                top: BorderSide(
-                  color: grey1,
-                  width: 1.0,
-                ),
-                bottom: BorderSide(
-                  color: grey1,
-                  width: 1.0,
-                ),
-              ),
-            ),
-            child: Padding(
-              padding: const EdgeInsets.only(
-                  top: 18.0, bottom: 18.0, left: 13.0, right: 13.0),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: grey2,
-                      shape: BoxShape.circle,
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Icon(
-                        Icons.person_outline,
-                        size: 50.0,
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 17.0,
-                  ),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Felipe Orlando",
-                          style: GoogleFonts.lato(fontSize: 20.0),
-                        ),
-                        SizedBox(
-                          height: 5.0,
-                        ),
-                        Text(
-                          "Founder & CEO at theGeneric Aadhaar | Managing Director at Swastya Lifestyle",
-                          style: GoogleFonts.montserrat(
-                            color: grey2,
-                            fontSize: 17.0,
-                          ),
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                        SizedBox(
-                          height: 5.0,
-                        ),
-                        Row(
-                          children: [
-                            Text(
-                              '1w',
-                              style: person_desc.copyWith(fontSize: 17.0),
-                            ),
-                            SizedBox(
-                              width: 6.0,
-                            ),
-                            Icon(
-                              Icons.public,
-                              color: grey2,
-                              size: 19.0,
-                            )
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    width: 4.0,
-                  ),
-                  Row(
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border: Border.all(width: 1, color: grey2)),
-                        child: Padding(
-                          padding: const EdgeInsets.all(5.0),
-                          child: Icon(
-                            Icons.clear,
-                            size: 34.0,
-                            color: grey2,
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 10.0,
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border: Border.all(width: 1, color: blue)),
-                        child: Padding(
-                          padding: const EdgeInsets.all(5.0),
-                          child: Icon(
-                            Icons.done,
-                            size: 34.0,
-                            color: blue,
-                          ),
-                        ),
-                      ),
-                    ],
-                  )
-                ],
-              ),
-            ),
+          ListView.builder(
+            physics: NeverScrollableScrollPhysics(),
+            itemCount: 2,
+            shrinkWrap: true,
+            itemBuilder: (BuildContext context, int index) {
+              return invitationTile(
+                  invitationUsers[index].name,
+                  invitationUsers[index].imageUrl,
+                  invitationUsers[index].profession,
+                  invitationUsers[index].mututalFriends);
+            },
           ),
-          Container(
-            decoration: BoxDecoration(
+          GestureDetector(
+            onTap: () {
+              Get.to(InvitationPage());
+            },
+            child: Container(
+              height: 46.0,
               color: Colors.white,
-              border: Border(
-                top: BorderSide(
-                  color: grey1,
-                  width: 1.0,
-                ),
-                bottom: BorderSide(
-                  color: grey1,
-                  width: 1.0,
-                ),
-              ),
-            ),
-            child: Padding(
-              padding: const EdgeInsets.only(
-                  top: 18.0, bottom: 18.0, left: 13.0, right: 13.0),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: grey2,
-                      shape: BoxShape.circle,
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Icon(
-                        Icons.person_outline,
-                        size: 50.0,
-                      ),
-                    ),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 13.0, right: 13.0),
+                child: Center(
+                  child: Text(
+                    "Show More",
+                    style: GoogleFonts.lato(
+                        color: blue,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 17.0),
                   ),
-                  SizedBox(
-                    width: 17.0,
-                  ),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Rajat Agarwal",
-                          style: GoogleFonts.lato(fontSize: 20.0),
-                        ),
-                        SizedBox(
-                          height: 5.0,
-                        ),
-                        Text(
-                          "Founder & CEO at theGeneric Aadhaar | Managing Director at Swastya Lifestyle",
-                          style: GoogleFonts.montserrat(
-                            color: grey2,
-                            fontSize: 17.0,
-                          ),
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                        SizedBox(
-                          height: 5.0,
-                        ),
-                        Row(
-                          children: [
-                            Text(
-                              '1w',
-                              style: person_desc.copyWith(fontSize: 17.0),
-                            ),
-                            SizedBox(
-                              width: 6.0,
-                            ),
-                            Icon(
-                              Icons.public,
-                              color: grey2,
-                              size: 19.0,
-                            )
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    width: 4.0,
-                  ),
-                  Row(
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border: Border.all(width: 1, color: grey2)),
-                        child: Padding(
-                          padding: const EdgeInsets.all(5.0),
-                          child: Icon(
-                            Icons.clear,
-                            size: 34.0,
-                            color: grey2,
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 10.0,
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border: Border.all(width: 1, color: blue)),
-                        child: Padding(
-                          padding: const EdgeInsets.all(5.0),
-                          child: Icon(
-                            Icons.done,
-                            size: 34.0,
-                            color: blue,
-                          ),
-                        ),
-                      ),
-                    ],
-                  )
-                ],
-              ),
-            ),
-          ),
-          Container(
-            height: 46.0,
-            color: Colors.white,
-            child: Padding(
-              padding: const EdgeInsets.only(left: 13.0, right: 13.0),
-              child: Center(
-                child: Text(
-                  "Show More",
-                  style: GoogleFonts.lato(
-                      color: blue, fontWeight: FontWeight.bold, fontSize: 17.0),
                 ),
               ),
             ),

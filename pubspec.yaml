@@ -38,6 +38,7 @@ dependencies:
   google_fonts: ^2.3.1
   flutter_staggered_grid_view: ^0.4.0
   styled_text: ^5.0.0+1
+  readmore: ^2.1.0
   
 
 dev_dependencies:
@@ -63,10 +64,11 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
-
+  assets:
+    - images/mens/
+    - images/womens/
+    - images/other/
+    - images/timeline/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
