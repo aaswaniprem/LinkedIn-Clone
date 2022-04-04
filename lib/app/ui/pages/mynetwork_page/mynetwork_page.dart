@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:linkedin_clone/app/data/models/invitationsmodel.dart';
 import 'package:linkedin_clone/app/ui/global_widgets/4list.dart';
 import 'package:linkedin_clone/app/ui/global_widgets/network_item.dart';
+import 'package:linkedin_clone/app/ui/global_widgets/widget.dart';
 import 'package:linkedin_clone/app/ui/pages/invitation_page/invitation_page.dart';
 import 'package:linkedin_clone/app/ui/pages/managenetwork_page/managenetwork_page.dart';
 import 'package:linkedin_clone/app/ui/pages/mynetwork_page/widgets/invitation_receive_tile.dart';
@@ -112,18 +113,33 @@ class MyNetworkPage extends GetView<MyNetworkController> {
               ),
             ),
           ),
-          SizedBox(
-            height: 20.0,
-          ),
+          dividerwidget(height: 7.0, thickness: 7.0),
           List4(),
+          dividerwidget(height: 7.0, thickness: 7.0),
           List4(),
-          SizedBox(
-            height: 20.0,
-          ),
+          dividerwidget(height: 7.0, thickness: 7.0),
           Container(
             color: Colors.white,
             child: Column(
               children: [
+                Container(
+                  color: Colors.white,
+                  width: Get.width,
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                        left: 13.0, right: 13.0, top: 10.0, bottom: 15.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Pages you may like",
+                          style: GoogleFonts.lato(
+                              fontSize: 17.0, color: Color(0xff434343)),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
                 Padding(
                   padding: const EdgeInsets.only(
                       left: 13.0, right: 13.0, bottom: 10.0),

@@ -24,10 +24,8 @@ class List4 extends StatelessWidget {
               children: [
                 Text(
                   "People you may know from JIET Group of Institutions Jodhpur",
-                  style: GoogleFonts.lato(fontSize: 20.0),
-                ),
-                SizedBox(
-                  height: 20.0,
+                  style: GoogleFonts.lato(
+                      fontSize: 17.0, color: Color(0xff434343)),
                 ),
               ],
             ),
@@ -72,9 +70,9 @@ class List4 extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(
-          height: 20.0,
-        ),
+        // SizedBox(
+        //   height: 20.0,
+        // ),
       ],
     );
   }

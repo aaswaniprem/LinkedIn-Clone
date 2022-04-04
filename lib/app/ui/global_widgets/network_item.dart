@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:linkedin_clone/app/ui/theme/color_constant.dart';
 import '../theme/text_constant.dart';
 
@@ -36,8 +37,8 @@ class NetworkItem extends StatelessWidget {
               ),
               child: Container(
                 decoration: BoxDecoration(
-                  color: grey1,
-                ),
+                    // color: grey1,
+                    ),
                 height: 150.0,
                 child: Stack(
                   children: [
@@ -77,19 +78,18 @@ class NetworkItem extends StatelessWidget {
               padding: const EdgeInsets.only(left: 13.0, right: 13.0),
               child: Column(
                 children: [
-                  Text(
-                    "Arpita Sharma",
-                    style: person_name.copyWith(fontSize: 19.0),
-                  ),
+                  Text("Arpita Sharma",
+                      style: GoogleFonts.lato(
+                          fontSize: 17.0, fontWeight: FontWeight.w600)),
                   SizedBox(
                     height: 6.0,
                   ),
                   Container(
                     // color: Colors.red,
-                    height: 48.0,
+                    height: 40.0,
                     child: Text(
-                      profession,
-                      style: person_desc.copyWith(fontSize: 16.0),
+                      profession + profession,
+                      style: professiontext,
                       maxLines: 2,
                       textAlign: TextAlign.center,
                     ),

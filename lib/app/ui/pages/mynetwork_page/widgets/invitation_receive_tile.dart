@@ -42,17 +42,14 @@ Widget invitationTile(
               children: [
                 Text(
                   name,
-                  style: GoogleFonts.lato(fontSize: 20.0),
+                  style: GoogleFonts.lato(fontSize: 16.0),
                 ),
                 const SizedBox(
                   height: 5.0,
                 ),
                 Text(
                   profession,
-                  style: GoogleFonts.montserrat(
-                    color: grey2,
-                    fontSize: 17.0,
-                  ),
+                  style: person_desc2.copyWith(fontSize: 15.0),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ),
@@ -63,7 +60,7 @@ Widget invitationTile(
                   children: [
                     Text(
                       mutual.toString() + "mutual friends",
-                      style: person_desc.copyWith(fontSize: 17.0),
+                      style: extra_small,
                     ),
                     const SizedBox(
                       width: 6.0,
@@ -91,7 +88,7 @@ Widget invitationTile(
                   padding: EdgeInsets.all(5.0),
                   child: Icon(
                     Icons.clear,
-                    size: 34.0,
+                    size: 31.0,
                     color: grey2,
                   ),
                 ),
@@ -107,7 +104,7 @@ Widget invitationTile(
                   padding: EdgeInsets.all(5.0),
                   child: Icon(
                     Icons.done,
-                    size: 34.0,
+                    size: 31.0,
                     color: blue,
                   ),
                 ),

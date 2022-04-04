@@ -14,6 +14,9 @@ const Color grey2 = Color(0xff666666);
 //backgroundcolor
 const Color bgcolor = Color(0xffF3F2EE);
 
+//post description
+const Color postDesc = Color(0xff595959);
+
 //divider color
 const Color dividerColor = Color(0xffEBEBEB);
 
