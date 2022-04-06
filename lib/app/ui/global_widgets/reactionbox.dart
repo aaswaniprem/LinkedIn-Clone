@@ -60,7 +60,7 @@ Widget reactionBox() {
             ),
           ),
           Text(
-            "792",
+            "92,928 ",
             style: extra_small,
           ),
           Spacer(),
