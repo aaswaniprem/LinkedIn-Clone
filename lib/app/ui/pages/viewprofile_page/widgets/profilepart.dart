@@ -9,13 +9,13 @@ class ProfileBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return //profile part
         Container(
-      height: Get.height * 0.23,
+      height: Get.height * 0.18,
       width: Get.width,
       // color: Colors.red,
       child: Stack(
         children: [
           Container(
-            height: Get.height * 0.144,
+            height: Get.height * 0.11,
             width: Get.width,
             decoration: const BoxDecoration(
                 image: DecorationImage(
@@ -28,12 +28,12 @@ class ProfileBox extends StatelessWidget {
             child: Container(
               height: 110,
               width: 110,
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: Colors.yellow,
+                  border: Border.all(width: 3, color: Colors.white),
                   image: DecorationImage(
-                      fit: BoxFit.fill,
-                      image: AssetImage("images/other/profile1.jpeg"))),
+                      fit: BoxFit.fill, image: AssetImage("images/user.jpg"))),
             ),
           ),
         ],

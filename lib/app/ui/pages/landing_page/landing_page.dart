@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:linkedin_clone/app/ui/pages/addpost_page/addpost_page.dart';
 import 'package:linkedin_clone/app/ui/pages/home_page/home_page.dart';
 import 'package:linkedin_clone/app/ui/pages/jobs_page/jobs_page.dart';
+import 'package:linkedin_clone/app/ui/pages/maindrawer_page/maindrawer_page.dart';
 import 'package:linkedin_clone/app/ui/pages/messages_page/messages_page.dart';
 import 'package:linkedin_clone/app/ui/pages/mynetwork_page/mynetwork_page.dart';
 import 'package:linkedin_clone/app/ui/pages/notification_page/notification_page.dart';
@@ -100,18 +101,28 @@ class LandingPage extends GetView<LandingController> {
         )));
   }
 
+  final globalKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: globalKey,
       backgroundColor: bg,
+      drawer: MainDrawerPage(),
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
         leading: Padding(
           padding: const EdgeInsets.only(top: 11.0, bottom: 11.0),
-          child: Container(
-            decoration:
-                BoxDecoration(shape: BoxShape.circle, color: Colors.red),
+          child: GestureDetector(
+            onTap: () {
+              globalKey.currentState!.openDrawer();
+            },
+            child: Container(
+              decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.red,
+                  image: DecorationImage(image: AssetImage("images/user.jpg"))),
+            ),
           ),
         ),
         title: Center(
@@ -149,7 +160,7 @@ class LandingPage extends GetView<LandingController> {
               },
               icon: Icon(
                 Icons.chat,
-                color: grey,
+                color: grey2,
               ),
             ),
           )

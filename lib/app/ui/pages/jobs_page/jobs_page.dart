@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:linkedin_clone/app/data/models/jobsmodel.dart';
 
 import 'package:linkedin_clone/app/ui/pages/jobs_page/widgets/topbox.dart';
 import 'package:linkedin_clone/app/ui/theme/color_constant.dart';
@@ -87,7 +88,7 @@ class JobsPage extends GetView<JobsController> {
                       height: 20.0,
                     ),
                     ListView.builder(
-                      itemCount: 5,
+                      itemCount: jobsList.length,
                       shrinkWrap: true,
                       physics: NeverScrollableScrollPhysics(),
                       itemBuilder: (BuildContext context, int index) {
@@ -97,8 +98,8 @@ class JobsPage extends GetView<JobsController> {
                               border: Border(
                                   bottom: BorderSide(width: 1, color: grey1))),
                           child: Padding(
-                            padding:
-                                const EdgeInsets.only(top: 10.0, bottom: 10.0),
+                            padding: const EdgeInsets.only(
+                                top: 10.0, bottom: 10.0, left: 13.0),
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -107,7 +108,9 @@ class JobsPage extends GetView<JobsController> {
                                   width: 40.0,
                                   decoration: BoxDecoration(
                                       color: Colors.yellow,
-                                      shape: BoxShape.circle),
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              jobsList[index].companyImage))),
                                 ),
                                 SizedBox(
                                   width: 10.0,
@@ -116,13 +119,13 @@ class JobsPage extends GetView<JobsController> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      "Flutter Developer",
+                                      jobsList[index].jobtype,
                                       style: lato17,
                                     ),
                                     SizedBox(
                                       height: 2.0,
                                     ),
-                                    Text("Kalpas Innovations Pvt. Ltd.",
+                                    Text(jobsList[index].companyName,
                                         style: monsterrat14),
                                     SizedBox(
                                       height: 2.0,

@@ -25,7 +25,7 @@ class NetworkItem extends StatelessWidget {
       // height: 350,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(14.0),
-          border: Border.all(color: Colors.grey, width: 1.5)),
+          border: Border.all(color: dividerColor, width: 1.5)),
       child: Padding(
         padding: const EdgeInsets.only(bottom: 14.0),
         child: Column(
@@ -39,7 +39,7 @@ class NetworkItem extends StatelessWidget {
                 decoration: BoxDecoration(
                     // color: grey1,
                     ),
-                height: 150.0,
+                height: 120.0,
                 child: Stack(
                   children: [
                     Positioned(
@@ -56,14 +56,14 @@ class NetworkItem extends StatelessWidget {
                               image: DecorationImage(
                                   fit: BoxFit.fill,
                                   image: AssetImage("images/other/bg.png"))),
-                          height: 70.0,
+                          height: 60.0,
                           width: Get.width,
                         ),
                       ),
                     ),
                     Positioned.fill(
-                        top: 30,
-                        bottom: 17.0,
+                        top: 22,
+                        bottom: 4.0,
                         child: Container(
                           decoration: BoxDecoration(
                               color: Colors.green,
@@ -107,7 +107,7 @@ class NetworkItem extends StatelessWidget {
                       Expanded(
                         child: Text(
                           "7 mutual friends",
-                          style: person_desc.copyWith(fontSize: 15.0),
+                          style: extra_small,
                         ),
                       ),
                     ],
@@ -119,15 +119,15 @@ class NetworkItem extends StatelessWidget {
               padding:
                   const EdgeInsets.only(top: 15.0, left: 13.0, right: 13.0),
               child: Container(
-                height: 37.0,
+                height: 34.0,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                    border: Border.all(color: blue, width: 2),
+                    border: Border.all(color: blue, width: 1.5),
                     borderRadius: BorderRadius.circular(20.0)),
                 child: Center(
                   child: Text(
                     "Connect",
-                    style: person_name.copyWith(color: blue),
+                    style: bluetext.copyWith(fontSize: 16.0),
                   ),
                 ),
               ),

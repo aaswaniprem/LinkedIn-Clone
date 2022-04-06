@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:linkedin_clone/app/ui/theme/color_constant.dart';
 import 'package:styled_text/styled_text.dart';
-
 import '../../../theme/text_constant.dart';
 
 class ProfileBio extends StatelessWidget {
@@ -20,16 +19,16 @@ class ProfileBio extends StatelessWidget {
           const SizedBox(
             height: 4.0,
           ),
-          Text(
-            "Flutter Developer",
-            style: person_desc,
-          ),
+          Text("Flutter Developer", style: GoogleFonts.ubuntu(fontSize: 16.0)),
           const SizedBox(
             height: 15.0,
           ),
           Text(
             "Freelance,self-employed",
-            style: person_desc.copyWith(fontSize: 14),
+            style: monsterrat14,
+          ),
+          SizedBox(
+            height: 4.0,
           ),
           Text(
             "Jodhpur, Rajasthan, India",
@@ -55,7 +54,16 @@ class ProfileBio extends StatelessWidget {
                   width: 140.0,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(22.0),
-                    color: Colors.blue,
+                    color: blue,
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Open to",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16.0),
+                    ),
                   ),
                 ),
               ),
@@ -66,8 +74,17 @@ class ProfileBio extends StatelessWidget {
                 flex: 2,
                 child: Container(
                   decoration: BoxDecoration(
+                    border: Border.all(width: 1, color: reationColor),
                     borderRadius: BorderRadius.circular(22.0),
-                    color: Colors.blue,
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Add Section",
+                      style: TextStyle(
+                          fontSize: 17.0,
+                          fontWeight: FontWeight.bold,
+                          color: reationColor),
+                    ),
                   ),
                   height: 34.0,
                   width: 140.0,

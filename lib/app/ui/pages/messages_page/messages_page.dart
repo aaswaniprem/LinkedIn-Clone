@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:linkedin_clone/app/ui/theme/chat_detail_page.dart';
 import 'package:linkedin_clone/app/ui/theme/color_constant.dart';
 import 'package:linkedin_clone/app/ui/theme/text_constant.dart';
 import '../../../controllers/messages_controller.dart';
@@ -43,41 +44,47 @@ class MessagesPage extends GetView<MessagesController> {
                 itemCount: 6,
                 shrinkWrap: true,
                 itemBuilder: (BuildContext context, int index) {
-                  return Container(
-                    decoration: BoxDecoration(
-                        border: Border(
-                            bottom: BorderSide(width: 1, color: dividerColor))),
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                          left: 13.0, right: 13.0, top: 15.0, bottom: 15.0),
-                      child: Row(
-                        children: [
-                          Container(
-                            height: 50.0,
-                            width: 50.0,
-                            decoration: BoxDecoration(
-                                color: Colors.yellow, shape: BoxShape.circle),
-                          ),
-                          SizedBox(
-                            width: 20.0,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text("Akash Jain",
-                                  style: GoogleFonts.lato(fontSize: 16.0)),
-                              SizedBox(
-                                height: 3.0,
-                              ),
-                              Text(
-                                "You: Likewise",
-                                style: monsterrat14,
-                              ),
-                            ],
-                          ),
-                          Spacer(),
-                          Text("Mond")
-                        ],
+                  return GestureDetector(
+                    onTap: () {
+                      Get.to(ChatDetailPage());
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                          border: Border(
+                              bottom:
+                                  BorderSide(width: 1, color: dividerColor))),
+                      child: Padding(
+                        padding: const EdgeInsets.only(
+                            left: 13.0, right: 13.0, top: 15.0, bottom: 15.0),
+                        child: Row(
+                          children: [
+                            Container(
+                              height: 50.0,
+                              width: 50.0,
+                              decoration: BoxDecoration(
+                                  color: Colors.yellow, shape: BoxShape.circle),
+                            ),
+                            SizedBox(
+                              width: 20.0,
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Akash Jain",
+                                    style: GoogleFonts.lato(fontSize: 16.0)),
+                                SizedBox(
+                                  height: 3.0,
+                                ),
+                                Text(
+                                  "You: Likewise",
+                                  style: monsterrat14,
+                                ),
+                              ],
+                            ),
+                            Spacer(),
+                            Text("Mond")
+                          ],
+                        ),
                       ),
                     ),
                   );

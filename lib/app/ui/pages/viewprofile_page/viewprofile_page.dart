@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:linkedin_clone/app/data/models/profilemodel.dart';
 import 'package:linkedin_clone/app/ui/global_widgets/widget.dart';
 import 'package:linkedin_clone/app/ui/pages/viewprofile_page/widgets/activity_box.dart';
 import 'package:linkedin_clone/app/ui/pages/viewprofile_page/widgets/educationbox.dart';
@@ -20,7 +21,7 @@ class ViewProfilePage extends GetView<ViewProfileController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      // backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 1,
@@ -96,14 +97,26 @@ class ViewProfilePage extends GetView<ViewProfileController> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text("Analytics", style: boldText),
-                    Text("Private To You", style: person_desc),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.visibility,
+                          color: reationColor,
+                          size: 18.0,
+                        ),
+                        SizedBox(
+                          width: 8.0,
+                        ),
+                        Text("Private To You", style: person_desc),
+                      ],
+                    ),
                     ListView.builder(
                       physics: const NeverScrollableScrollPhysics(),
-                      itemCount: 3,
+                      itemCount: panalyticlist.length,
                       shrinkWrap: true,
                       scrollDirection: Axis.vertical,
                       itemBuilder: (BuildContext context, int index) {
-                        return ProfileAnalyticBox();
+                        return ProfileAnalyticBox(panalyticlist[index]);
                       },
                     ),
                   ],
@@ -136,10 +149,10 @@ class ViewProfilePage extends GetView<ViewProfileController> {
                     ListView.builder(
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
-                      itemCount: 2,
+                      itemCount: resourceslist.length,
                       scrollDirection: Axis.vertical,
                       itemBuilder: (BuildContext context, int index) {
-                        return ProfileAnalyticBox();
+                        return ProfileAnalyticBox(resourceslist[index]);
                       },
                     ),
                     Container(
@@ -174,7 +187,7 @@ class ViewProfilePage extends GetView<ViewProfileController> {
                     ),
                     Text(
                         "Experienced Freelance with a demonstrated history of working in the internet community . Skilled in firebase , PHP,Communication  , Android Development and leadershop",
-                        style: person_desc.copyWith(fontSize: 14.0)),
+                        style: monsterrat14),
                     SizedBox(
                       height: 15.0,
                     )

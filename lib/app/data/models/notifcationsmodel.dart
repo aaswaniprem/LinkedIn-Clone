@@ -3,19 +3,22 @@ class NotificationModel {
   final String name;
   bool isRead;
   bool isJob;
+  bool profileView;
 
-  NotificationModel(
-      {required this.image,
-      required this.name,
-      this.isRead = false,
-      this.isJob = false});
+  NotificationModel({
+    required this.image,
+    required this.name,
+    this.isRead = false,
+    this.isJob = false,
+    this.profileView = false,
+  });
 }
 
 List<NotificationModel> notificationsList = [
   NotificationModel(
-    image: "images/",
-    name: "<b>Akansha Bhadani</b> shared a post",
-  ),
+      image: "images/",
+      name: "<b>Akansha Bhadani</b> shared a post",
+      isJob: true),
   NotificationModel(
     image: "images/",
     name: "Your <b>Job Alert<b> for <b>flutter</b> in <b>Jaipur</b>",
@@ -23,11 +26,12 @@ List<NotificationModel> notificationsList = [
   NotificationModel(
     image: "images/",
     name: "Your <b>Job Alert</b> for <b>flutter</b> in <b>India</b>",
+    profileView: true,
   ),
   NotificationModel(
-    image: "images/",
-    name: "Your <b>Job Alert</b> for <b>flutter</b> in <b>Mumbai</b>",
-  ),
+      image: "images/",
+      name: "Your <b>Job Alert</b> for <b>flutter</b> in <b>Mumbai</b>",
+      isJob: true),
   NotificationModel(
     image: "images/",
     name: "Your <b>Job Alert</b> for <b>android Developer</b> in <b>Mumbai</b>",

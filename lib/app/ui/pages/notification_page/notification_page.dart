@@ -49,17 +49,68 @@ class NotificationPage extends GetView<NotificationController> {
                       width: 15.0,
                     ),
                     Flexible(
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 8.0),
-                        child: StyledText(
-                          text: notificationsList[index].name,
-                          tags: {
-                            'b': StyledTextTag(
-                                style: TextStyle(fontWeight: FontWeight.bold)),
-                          },
-                          style: GoogleFonts.nunitoSans(
-                              color: Color(0xff161819), fontSize: 15.0),
-                        ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(top: 8.0),
+                            child: StyledText(
+                              text: notificationsList[index].name,
+                              tags: {
+                                'b': StyledTextTag(
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold)),
+                              },
+                              style: GoogleFonts.nunitoSans(
+                                  color: Color(0xff161819), fontSize: 15.0),
+                            ),
+                          ),
+                          if (notificationsList[index].isJob) ...[
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(top: 7.0, right: 13.0),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    border: Border.all(color: blue, width: 1.5),
+                                    borderRadius: BorderRadius.circular(20.0)),
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                      left: 15.0,
+                                      right: 15.0,
+                                      top: 5.0,
+                                      bottom: 5.0),
+                                  child: Text(
+                                    "View 4 jobs",
+                                    style: bluetext.copyWith(fontSize: 16.0),
+                                  ),
+                                ),
+                              ),
+                            )
+                          ] else if (notificationsList[index].profileView) ...[
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(top: 7.0, right: 13.0),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    border: Border.all(color: blue, width: 1.5),
+                                    borderRadius: BorderRadius.circular(20.0)),
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                      left: 15.0,
+                                      right: 15.0,
+                                      top: 5.0,
+                                      bottom: 5.0),
+                                  child: Text(
+                                    "Try premium free for 1 Month",
+                                    style: bluetext.copyWith(fontSize: 16.0),
+                                  ),
+                                ),
+                              ),
+                            )
+                          ] else ...[
+                            SizedBox.shrink()
+                          ],
+                        ],
                       ),
                     ),
                   ],

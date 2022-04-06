@@ -39,7 +39,9 @@ dependencies:
   flutter_staggered_grid_view: ^0.4.0
   styled_text: ^5.0.0+1
   readmore: ^2.1.0
-  
+  flutter_reaction_button: ^2.0.0+2
+  flutter_feed_reaction: ^0.0.3
+
 
 dev_dependencies:
   flutter_test:
@@ -65,10 +67,16 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - images/
     - images/mens/
     - images/womens/
     - images/other/
     - images/timeline/
+    - images/icons/
+    - images/reactionicon/
+    - images/personprofile/
+    - images/pages/profile/
+    - images/pages/cover/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

@@ -27,6 +27,8 @@ TextStyle lato14grey = GoogleFonts.lato(
   fontSize: 14.0,
 );
 
+TextStyle lato13 = GoogleFonts.lato(color: reationColor, fontSize: 13.0);
+
 //lato14green
 TextStyle lato14green = GoogleFonts.lato(
   color: greenColor,
@@ -61,11 +63,13 @@ TextStyle workHead =
 
 // extrasmalltext
 TextStyle extra_small =
-    GoogleFonts.montserrat(fontSize: 14.0, color: Color(0xff6E6E6E));
+    GoogleFonts.montserrat(fontSize: 13.0, color: Color(0xff6E6E6E));
 
 //boldhead
-TextStyle boldText =
-    GoogleFonts.lato(fontWeight: FontWeight.w600, fontSize: 19.0);
+TextStyle boldText = GoogleFonts.lato(
+  fontWeight: FontWeight.w600,
+  fontSize: 19.0,
+);
 
 //blue text
 TextStyle bluetext =

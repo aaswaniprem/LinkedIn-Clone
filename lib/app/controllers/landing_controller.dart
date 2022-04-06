@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:linkedin_clone/app/ui/pages/addpost_page/addpost_page.dart';
 import 'package:linkedin_clone/app/ui/pages/recommendation_page/recommendation_page.dart';
 import 'package:linkedin_clone/app/ui/pages/viewprofile_page/viewprofile_page.dart';
 
@@ -13,7 +14,7 @@ class LandingController extends GetxController {
 
       print(tabIndex.value);
     } else {
-      Get.to(() => (ViewProfilePage()));
+      Get.to(() => (AddPostPage()));
     }
   }
 

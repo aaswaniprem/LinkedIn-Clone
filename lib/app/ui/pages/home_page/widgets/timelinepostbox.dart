@@ -11,11 +11,11 @@ import '../../../theme/color_constant.dart';
 
 final iconsize = 18.0;
 
-Widget timelinePostBox({
-  required String name,
-  required String imagepath,
-  required String description,
-}) {
+Widget timelinePostBox(
+    {required String name,
+    required String imagepath,
+    required String description,
+    required String profilePhoto}) {
   final tabtext = 13.0;
   final Color tabtextstyle = reationColor;
   return Container(
@@ -38,19 +38,14 @@ Widget timelinePostBox({
                     children: [
                       Row(
                         children: [
-                          Text(
-                            "Souvik Banerjee",
-                            style: GoogleFonts.roboto(
-                                color: black1,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 17.0),
-                          ),
+                          // Image.asset("images/reactionicon/like.png"),
+                          Text("Souvik Banerjee", style: lato17),
                           SizedBox(
                             width: 8.0,
                           ),
                           Text("celebrates this",
                               style: GoogleFonts.montserrat(
-                                color: grey2,
+                                color: reationColor,
                                 fontSize: 15.0,
                               ))
                         ],
@@ -71,17 +66,20 @@ Widget timelinePostBox({
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
+                    height: 40.0,
+                    width: 40.0,
                     decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: grey2,
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Icon(
-                        Icons.person_outline,
-                        size: 40.0,
-                      ),
-                    ),
+                        shape: BoxShape.circle,
+                        color: reationColor,
+                        image: DecorationImage(
+                            image: AssetImage(profilePhoto), fit: BoxFit.fill)),
+                    // child: Padding(
+                    //   padding: const EdgeInsets.all(8.0),
+                    //   child: Icon(
+                    //     Icons.person_outline,
+                    //     size: 30.0,
+                    //   ),
+                    // ),
                   ),
                   SizedBox(
                     width: 17.0,
@@ -93,7 +91,10 @@ Widget timelinePostBox({
                       children: [
                         Text(
                           name,
-                          style: person_name,
+                          style: lato17,
+                        ),
+                        SizedBox(
+                          height: 3.0,
                         ),
                         Text(
                           "Founder & CEO at Generic Aadhaar | Managing Director at Swastya Lifestyle",
@@ -101,6 +102,9 @@ Widget timelinePostBox({
                               color: reationColor, fontSize: 13.0),
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
+                        ),
+                        SizedBox(
+                          height: 3.0,
                         ),
                         Row(
                           children: [
@@ -113,7 +117,7 @@ Widget timelinePostBox({
                             ),
                             Icon(
                               Icons.public,
-                              color: grey2,
+                              color: reationColor,
                               size: 19.0,
                             )
                           ],
@@ -152,11 +156,11 @@ Widget timelinePostBox({
         //           image: AssetImage(imagepath), fit: BoxFit.cover),
         //     )),
         ,
-        Container(
-          height: 50.0,
-          width: Get.width,
-          color: Colors.white,
-        ),
+        // Container(
+        //   height: 50.0,
+        //   width: Get.width,
+        //   color: Colors.white,
+        // ),
 
         SizedBox(
           height: 14.0,
@@ -180,7 +184,7 @@ Widget timelinePostBox({
                   children: [
                     Icon(
                       Icons.thumb_up_alt,
-                      color: grey2,
+                      color: reationColor,
                       size: iconsize,
                     ),
                     Padding(
@@ -189,7 +193,7 @@ Widget timelinePostBox({
                         "Like",
                         style: GoogleFonts.actor(
                             fontSize: tabtext,
-                            color: grey2,
+                            color: reationColor,
                             fontWeight: FontWeight.w600),
                       ),
                     )
@@ -200,7 +204,7 @@ Widget timelinePostBox({
                     Icon(
                       Icons.comment,
                       size: iconsize,
-                      color: grey2,
+                      color: reationColor,
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 4.0),
@@ -208,7 +212,7 @@ Widget timelinePostBox({
                         "Comment",
                         style: GoogleFonts.actor(
                             fontSize: tabtext,
-                            color: grey2,
+                            color: reationColor,
                             fontWeight: FontWeight.w600),
                       ),
                     )
@@ -219,7 +223,7 @@ Widget timelinePostBox({
                     Icon(
                       Icons.share,
                       size: iconsize,
-                      color: grey2,
+                      color: reationColor,
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 4.0),
@@ -227,7 +231,7 @@ Widget timelinePostBox({
                         "Share",
                         style: GoogleFonts.actor(
                             fontSize: tabtext,
-                            color: grey2,
+                            color: reationColor,
                             fontWeight: FontWeight.w600),
                       ),
                     )
@@ -238,7 +242,7 @@ Widget timelinePostBox({
                     Icon(
                       Icons.send,
                       size: iconsize,
-                      color: grey2,
+                      color: reationColor,
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 4.0),
@@ -246,7 +250,7 @@ Widget timelinePostBox({
                         "Send",
                         style: GoogleFonts.actor(
                             fontSize: tabtext,
-                            color: grey2,
+                            color: reationColor,
                             fontWeight: FontWeight.w600),
                       ),
                     ),
