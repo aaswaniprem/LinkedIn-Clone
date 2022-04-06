@@ -41,6 +41,7 @@ dependencies:
   readmore: ^2.1.0
   flutter_reaction_button: ^2.0.0+2
   flutter_feed_reaction: ^0.0.3
+  custom_line_indicator_bottom_navbar: ^0.0.8
 
 
 dev_dependencies:
@@ -77,6 +78,8 @@ flutter:
     - images/personprofile/
     - images/pages/profile/
     - images/pages/cover/
+    - images/featured/
+    - images/experience/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

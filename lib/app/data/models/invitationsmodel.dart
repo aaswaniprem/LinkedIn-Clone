@@ -25,33 +25,33 @@ List<InvitationUsers> invitationUsers = [
 
   //2
   InvitationUsers(
-      name: "Rahul Lalwani",
+      name: "Anjali Tiwari",
       profession: "Software Engineer",
       mututalFriends: 11,
-      imageUrl: "images/mens/men2.jpeg",
+      imageUrl: "images/womens/women4.jpg",
       time: ''),
 
   //3
   InvitationUsers(
-      name: "Priyanka Arora",
+      name: "Shreyansh Gupta",
       profession: "Graphic Designer",
       mututalFriends: 11,
-      imageUrl: "images/womens/women7.jpg",
+      imageUrl: "images/mens/men2.jpeg",
       time: ''),
 
   //4
   InvitationUsers(
-      name: "Prateek Agarwal",
+      name: "Niharika Agarwal",
       profession: "Data Scientis",
       mututalFriends: 11,
-      imageUrl: "images/mens/men3.jpg",
+      imageUrl: "images/womens/women8.jpg",
       time: ''),
   //5
   InvitationUsers(
-      name: "Vivek Dubey",
+      name: "Prashant Jain",
       profession: "Product Manager",
       mututalFriends: 11,
-      imageUrl: "images/mens/men4.jpg",
+      imageUrl: "images/mens/men3.jpg",
       time: ''),
 
 //6
@@ -59,14 +59,14 @@ List<InvitationUsers> invitationUsers = [
       name: "Nandini Maheswari",
       profession: "FLutter Developer",
       mututalFriends: 11,
-      imageUrl: "images/womens/women1.jpg",
+      imageUrl: "images/womens/women3.jpg",
       time: ''),
   //7
   InvitationUsers(
-      name: "Aishwarya Vaishnav",
+      name: "Harsh Trivedi",
       profession: "UI/UX designer",
       mututalFriends: 11,
-      imageUrl: "images/womens/women4.jpg",
+      imageUrl: "images/mens/men4.jpg",
       time: ''),
 
   //8
@@ -74,7 +74,7 @@ List<InvitationUsers> invitationUsers = [
       name: "Harshita Mathur",
       profession: "Junior(React) Frontend Developer",
       mututalFriends: 11,
-      imageUrl: "images/womens/women5.jpg",
+      imageUrl: "images/womens/women4.jpg",
       time: ''),
 
   //9

@@ -18,6 +18,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: Routes.landing,
       theme: ThemeData(
+          brightness: Brightness.light,
+          primaryTextTheme:
+              Theme.of(context).textTheme.apply(bodyColor: Colors.black),
+          // textTheme: TextTheme(),
           primaryColor: Colors.black,
           visualDensity: VisualDensity.adaptivePlatformDensity),
       // defaultTransition: Transition.fade,

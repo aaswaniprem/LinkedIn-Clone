@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:linkedin_clone/app/ui/theme/color_constant.dart';
 import 'package:linkedin_clone/app/ui/theme/text_constant.dart';
 
+List<String> languageList = ["English", "Sindhi", "Hindi"];
+
 Widget profieleLanguageBox() {
   return Container(
     width: Get.width,
@@ -14,7 +16,7 @@ Widget profieleLanguageBox() {
         children: [
           Text("Languages", style: boldText),
           ListView.builder(
-            itemCount: 3,
+            itemCount: languageList.length,
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             itemBuilder: (BuildContext context, int index) {
@@ -29,7 +31,7 @@ Widget profieleLanguageBox() {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "English",
+                        languageList[index],
                         style: workHead,
                       ),
                       Text(
@@ -43,10 +45,17 @@ Widget profieleLanguageBox() {
             },
           ),
           Container(
-            child: const Padding(
-              padding: EdgeInsets.only(left: 15.0, top: 15.0),
-              child: Text("Show all 23 skills"),
+            child: Padding(
+              padding: EdgeInsets.only(top: 15.0),
+              child: Center(
+                  child: Text(
+                "Show all 23 skills",
+                style: bluetext.copyWith(fontSize: 16.0, color: reationColor),
+              )),
             ),
+          ),
+          SizedBox(
+            height: 20.0,
           )
         ],
       ),

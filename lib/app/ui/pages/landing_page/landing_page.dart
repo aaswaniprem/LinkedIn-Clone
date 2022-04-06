@@ -1,3 +1,4 @@
+import 'package:custom_line_indicator_bottom_navbar/custom_line_indicator_bottom_navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -22,83 +23,47 @@ class LandingPage extends GetView<LandingController> {
       TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 12);
 
   buildBottomNavigationMenu(context) {
-    return Obx(() => MediaQuery(
-        data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
-        child: Container(
-          decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border(top: BorderSide(color: grey1, width: 2))),
-          height: 60,
-          child: BottomNavigationBar(
-            showUnselectedLabels: true,
-            showSelectedLabels: true,
-            type: BottomNavigationBarType.fixed,
-            onTap: controller.changeTabIndex,
-            currentIndex: controller.tabIndex.value,
-            backgroundColor: Colors.white,
-            unselectedItemColor: grey2,
-            selectedItemColor: Colors.black,
-            unselectedLabelStyle: unselectedLabelStyle,
-            selectedLabelStyle: selectedLabelStyle,
-            items: [
-              BottomNavigationBarItem(
-                icon: Container(
-                  margin: EdgeInsets.only(bottom: 7),
-                  child: Icon(
-                    Icons.home,
-                    size: 20.0,
-                  ),
-                ),
-                label: 'Home',
-                backgroundColor: Color.fromRGBO(36, 54, 101, 1.0),
-              ),
-              BottomNavigationBarItem(
-                icon: Container(
-                  margin: EdgeInsets.only(bottom: 7),
-                  child: Icon(
-                    Icons.group,
-                    size: 20.0,
-                  ),
-                ),
-                label: 'My Network',
-                backgroundColor: Color.fromRGBO(36, 54, 101, 1.0),
-              ),
-              BottomNavigationBarItem(
-                icon: Container(
-                  margin: EdgeInsets.only(bottom: 7),
-                  child: Icon(
-                    Icons.post_add,
-                    size: 20.0,
-                  ),
-                ),
-                label: 'Post',
-                backgroundColor: Color.fromRGBO(36, 54, 101, 1.0),
-              ),
-              BottomNavigationBarItem(
-                icon: Container(
-                  margin: EdgeInsets.only(bottom: 7),
-                  child: Icon(
-                    Icons.notifications,
-                    size: 20.0,
-                  ),
-                ),
-                label: 'Notifications',
-                backgroundColor: Color.fromRGBO(36, 54, 101, 1.0),
-              ),
-              BottomNavigationBarItem(
-                icon: Container(
-                  margin: EdgeInsets.only(bottom: 7),
-                  child: Icon(
-                    Icons.work,
-                    size: 20.0,
-                  ),
-                ),
-                label: 'Jobs',
-                backgroundColor: Color.fromRGBO(36, 54, 101, 1.0),
-              ),
-            ],
-          ),
-        )));
+    return Obx(
+      () => Container(
+        decoration: BoxDecoration(
+            border: Border(top: BorderSide(color: dividerColor, width: 1))),
+        child: CustomLineIndicatorBottomNavbar(
+          // showUnselectedLabels: true,
+          // showSelectedLabels: true,
+          // type: BottomNavigationBarType.fixed,
+          onTap: controller.changeTabIndex,
+          currentIndex: controller.tabIndex.value,
+          backgroundColor: Colors.white,
+          unSelectedColor: grey2,
+          selectedColor: Colors.black,
+          // unselectedLabelStyle: unselectedLabelStyle,
+          // selectedLabelStyle: selectedLabelStyle,
+          customBottomBarItems: [
+            CustomBottomBarItems(
+              icon: Icons.home,
+              label: 'Home',
+            ),
+            CustomBottomBarItems(
+              icon: Icons.group,
+              label: 'My Network',
+              // backgroundColor: Color.fromRGBO(36, 54, 101, 1.0),
+            ),
+            CustomBottomBarItems(
+              icon: Icons.post_add,
+              label: 'Post',
+            ),
+            CustomBottomBarItems(
+              icon: Icons.notifications,
+              label: 'Notifications',
+            ),
+            CustomBottomBarItems(
+              icon: Icons.work,
+              label: 'Jobs',
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
   final globalKey = GlobalKey<ScaffoldState>();

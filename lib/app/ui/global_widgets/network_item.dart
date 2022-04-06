@@ -53,6 +53,7 @@ class NetworkItem extends StatelessWidget {
                         ),
                         child: Container(
                           decoration: BoxDecoration(
+                              color: dividerColor,
                               image: DecorationImage(
                                   fit: BoxFit.fill,
                                   image: AssetImage("images/other/bg.png"))),
@@ -66,7 +67,7 @@ class NetworkItem extends StatelessWidget {
                         bottom: 4.0,
                         child: Container(
                           decoration: BoxDecoration(
-                              color: Colors.green,
+                              color: dividerColor,
                               shape: BoxShape.circle,
                               image: DecorationImage(image: AssetImage(image))),
                         ))

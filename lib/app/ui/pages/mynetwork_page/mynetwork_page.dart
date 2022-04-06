@@ -54,26 +54,31 @@ class MyNetworkPage extends GetView<MyNetworkController> {
           SizedBox(
             height: 10.0,
           ),
-          Container(
-            height: 46.0,
-            color: Colors.white,
-            child: Padding(
-              padding: const EdgeInsets.only(left: 13.0, right: 13.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "Invitations",
-                    style: GoogleFonts.lato(
-                        color: blue,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 17.0),
-                  ),
-                  Icon(
-                    Icons.chevron_right,
-                    color: grey2,
-                  )
-                ],
+          InkWell(
+            onTap: () {
+              Get.to(() => InvitationPage());
+            },
+            child: Container(
+              height: 46.0,
+              color: Colors.white,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 13.0, right: 13.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Invitations",
+                      style: GoogleFonts.lato(
+                          color: blue,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 17.0),
+                    ),
+                    Icon(
+                      Icons.chevron_right,
+                      color: grey2,
+                    )
+                  ],
+                ),
               ),
             ),
           ),

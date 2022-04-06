@@ -13,9 +13,20 @@ class SeeMorePages extends GetView<RecommendationController> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.white,
           elevation: 1,
-          title: Text('SeeMorePages'),
+          automaticallyImplyLeading: false,
+          leading: Icon(
+            Icons.arrow_back,
+            color: reationColor,
+          ),
+          backgroundColor: Colors.white,
+          title: Text(
+            'SeeMorePages',
+            style: TextStyle(
+                fontWeight: FontWeight.w600,
+                fontSize: 20.0,
+                color: Colors.black),
+          ),
         ),
         body: SingleChildScrollView(
             child: Padding(

@@ -29,6 +29,7 @@ Widget invitationTile(
               height: 70.0,
               width: 70.0,
               decoration: new BoxDecoration(
+                  color: dividerColor,
                   shape: BoxShape.circle,
                   image: new DecorationImage(
                       fit: BoxFit.fill, image: AssetImage(imageUrl)))),

@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:linkedin_clone/app/ui/theme/color_constant.dart';
 import 'package:linkedin_clone/app/ui/theme/text_constant.dart';
 
+List<String> skillList = ["Flutter", "Web Development", "Android"];
+
 Widget skillprofilebox() {
   return Container(
     width: Get.width,
@@ -14,7 +16,7 @@ Widget skillprofilebox() {
         children: [
           Text("Skills", style: boldText),
           ListView.builder(
-            itemCount: 3,
+            itemCount: skillList.length,
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             itemBuilder: (BuildContext context, int index) {
@@ -25,17 +27,24 @@ Widget skillprofilebox() {
                 child: Padding(
                     padding: EdgeInsets.only(top: 13.0, bottom: 13.0),
                     child: Text(
-                      "Flutter",
+                      skillList[index],
                       style: workHead,
                     )),
               );
             },
           ),
           Container(
-            child: const Padding(
-              padding: EdgeInsets.only(left: 15.0, top: 15.0),
-              child: Text("Show all 23 skills"),
+            child: Padding(
+              padding: EdgeInsets.only(top: 15.0),
+              child: Center(
+                  child: Text(
+                "Show all 23 skills",
+                style: bluetext.copyWith(fontSize: 16.0, color: reationColor),
+              )),
             ),
+          ),
+          SizedBox(
+            height: 20.0,
           )
         ],
       ),

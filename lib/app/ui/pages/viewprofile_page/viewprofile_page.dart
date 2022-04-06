@@ -21,7 +21,7 @@ class ViewProfilePage extends GetView<ViewProfileController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Colors.white,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 1,
@@ -41,51 +41,6 @@ class ViewProfilePage extends GetView<ViewProfileController> {
               height: 20.0,
             ),
 
-            // Container(
-            //   height: Get.height * 0.42,
-            //   width: Get.width,
-            //   color: Colors.red,
-            //   child: Padding(
-            //     padding: const EdgeInsets.only(top: 15.0, left: 13.0),
-            //     child: Column(
-            //       crossAxisAlignment: CrossAxisAlignment.start,
-            //       children: [
-            //         Text(
-            //           "Suggested For You",
-            //           style: TextStyle(
-            //               color: Colors.black,
-            //               fontSize: 24.0,
-            //               fontWeight: FontWeight.bold),
-            //         ),
-            //         SizedBox(
-            //           height: 5.0,
-            //         ),
-            //         Text("Private To You"),
-            //         SizedBox(
-            //           height: 15.0,
-            //         ),
-            //         Container(
-            //           height: Get.height * 0.28,
-            //           width: Get.width,
-            //           child: ListView.builder(
-            //             itemCount: 4,
-            //             scrollDirection: Axis.horizontal,
-            //             itemBuilder: (BuildContext context, int index) {
-            //               return Padding(
-            //                 padding: const EdgeInsets.only(left: 15.0),
-            //                 child: Container(
-            //                   height: Get.height * 0.25,
-            //                   width: Get.width * 0.86,
-            //                   color: Colors.green,
-            //                 ),
-            //               );
-            //             },
-            //           ),
-            //         ),
-            //       ],
-            //     ),
-            //   ),
-            // ),
             dividerwidget(thickness: 4.0, height: 4.0),
             Container(
               width: Get.width,
@@ -235,113 +190,8 @@ class ViewProfilePage extends GetView<ViewProfileController> {
             const SizedBox(
               height: 20.0,
             ),
-            Container(
-                height: Get.height * 0.8,
-                width: Get.width * 0.9,
-                child: _tabSection())
           ],
         ),
-      ),
-    );
-  }
-
-  Widget _tabSection() {
-    return DefaultTabController(
-      length: 4,
-      child: Column(
-        mainAxisSize: MainAxisSize.max,
-        children: <Widget>[
-          TabBar(
-              indicatorColor: greenColor,
-              labelColor: greenColor,
-              labelStyle: bluetext.copyWith(fontSize: 16.0),
-              labelPadding: EdgeInsets.zero,
-              unselectedLabelColor: Colors.grey,
-              tabs: [
-                Tab(text: "Home"),
-                Tab(text: "Articles"),
-                Tab(text: "User"),
-                Tab(text: "School"),
-              ]),
-          Expanded(
-            child: Container(
-              color: Colors.red,
-              child: TabBarView(
-                  physics: NeverScrollableScrollPhysics(),
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 13.0, top: 15.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Education",
-                            style: boldText,
-                          ),
-                          ListView.builder(
-                            itemCount: 3,
-                            physics: const NeverScrollableScrollPhysics(),
-                            shrinkWrap: true,
-                            itemBuilder: (BuildContext context, int index) {
-                              return Container(
-                                decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    border: Border(
-                                        bottom: BorderSide(
-                                            width: 1, color: dividerColor))),
-                                child: Padding(
-                                  padding: const EdgeInsets.only(
-                                      top: 15.0, bottom: 15.0),
-                                  child: Row(
-                                    children: [
-                                      Container(
-                                        height: 50.0,
-                                        width: 50.0,
-                                        color: Colors.yellow,
-                                      ),
-                                      const SizedBox(
-                                        width: 8.0,
-                                      ),
-                                      Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Text(
-                                            "JIET Group Of Institutions Jodhpur",
-                                            style: workHead,
-                                          ),
-                                          Text(
-                                            "Drop Out Computer Sciencte",
-                                            style: person_desc,
-                                          ),
-                                          Text(
-                                            "2019-2019",
-                                            style: extra_small,
-                                          )
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              );
-                            },
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      child: const Text("Articles Body"),
-                    ),
-                    Container(
-                      child: const Text("User Body"),
-                    ),
-                    Container(
-                      child: const Text("User Body"),
-                    ),
-                  ]),
-            ),
-          ),
-        ],
       ),
     );
   }

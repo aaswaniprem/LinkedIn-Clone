@@ -57,6 +57,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.4"
+  custom_line_indicator_bottom_navbar:
+    dependency: "direct main"
+    description:
+      name: custom_line_indicator_bottom_navbar
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.8"
   fake_async:
     dependency: transitive
     description:

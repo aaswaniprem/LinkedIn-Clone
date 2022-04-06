@@ -10,25 +10,24 @@ class InvitationPage extends GetView<InvitationController> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          elevation: 1,
+          automaticallyImplyLeading: false,
+          leading: Icon(
+            Icons.arrow_back,
+            color: reationColor,
+          ),
           backgroundColor: Colors.white,
-          title: Text('Invitaions'),
+          title: Text(
+            'Invitations',
+            style: TextStyle(
+                fontWeight: FontWeight.w600,
+                fontSize: 20.0,
+                color: Colors.black),
+          ),
         ),
         body: SingleChildScrollView(
           child: Column(
             children: [
-              Container(
-                height: 60.0,
-                width: Get.width,
-                color: bgcolor,
-              ),
-              Container(
-                height: 60.0,
-                width: Get.width,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border(
-                        bottom: BorderSide(width: 1, color: dividerColor))),
-              ),
               ListView.builder(
                 shrinkWrap: true,
                 physics: NeverScrollableScrollPhysics(),

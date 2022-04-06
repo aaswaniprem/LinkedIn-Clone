@@ -3,6 +3,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
 import 'package:linkedin_clone/app/data/models/invitationsmodel.dart';
 import 'package:linkedin_clone/app/ui/global_widgets/network_item.dart';
+import 'package:linkedin_clone/app/ui/theme/color_constant.dart';
 import '../../../controllers/recommendation_controller.dart';
 
 class RecommendationPage extends GetView<RecommendationController> {
@@ -12,7 +13,18 @@ class RecommendationPage extends GetView<RecommendationController> {
         appBar: AppBar(
           backgroundColor: Colors.white,
           elevation: 1,
-          title: Text('RecommendationPage'),
+          title: Text(
+            'RecommendationPage',
+            style: TextStyle(
+                fontWeight: FontWeight.w600,
+                fontSize: 20.0,
+                color: Colors.black),
+          ),
+          automaticallyImplyLeading: false,
+          leading: Icon(
+            Icons.arrow_back,
+            color: reationColor,
+          ),
         ),
         body: SingleChildScrollView(
             child: Padding(

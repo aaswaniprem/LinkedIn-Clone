@@ -71,6 +71,8 @@ TextStyle boldText = GoogleFonts.lato(
   fontSize: 19.0,
 );
 
+TextStyle bold20 =
+    TextStyle(fontWeight: FontWeight.w600, fontSize: 20.0, color: Colors.black);
 //blue text
 TextStyle bluetext =
     GoogleFonts.lato(color: blue, fontWeight: FontWeight.bold, fontSize: 14.0);

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:linkedin_clone/app/data/models/profilemodel.dart';
 import '../../../theme/color_constant.dart';
 import '../../../theme/text_constant.dart';
 
@@ -20,7 +21,7 @@ Widget experienceBox() {
           Container(
             width: Get.width,
             child: ListView.builder(
-              itemCount: 2,
+              itemCount: experienceList.length,
               physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
               itemBuilder: (BuildContext context, int index) {
@@ -36,7 +37,12 @@ Widget experienceBox() {
                         Container(
                           height: 50.0,
                           width: 50.0,
-                          color: Colors.yellow,
+                          decoration: BoxDecoration(
+                              color: dividerColor,
+                              image: DecorationImage(
+                                  fit: BoxFit.fill,
+                                  image:
+                                      AssetImage(experienceList[index].image))),
                         ),
                         const SizedBox(
                           width: 8.0,
@@ -44,7 +50,7 @@ Widget experienceBox() {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("Freelance Developer",
+                            Text(experienceList[index].name,
                                 style: GoogleFonts.robotoSlab(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 17.0)),
@@ -52,14 +58,14 @@ Widget experienceBox() {
                             //   height: 2.0,
                             // ),
                             Text(
-                              "Freelance , self-employed. Full-tIME",
+                              experienceList[index].description,
                               style: person_desc,
                             ),
                             SizedBox(
                               height: 2.0,
                             ),
                             Text(
-                              "Jan2021 - Present -1yr 4 mos",
+                              experienceList[index].time,
                               style: extra_small,
                             )
                           ],

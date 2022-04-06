@@ -57,7 +57,7 @@ class List4 extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  Get.to(RecommendationPage());
+                  Get.to(() => RecommendationPage());
                 },
                 child: Text(
                   "See all",

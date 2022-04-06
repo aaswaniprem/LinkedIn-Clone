@@ -35,7 +35,12 @@ Widget profileeducationbox() {
                         Container(
                           height: 50.0,
                           width: 50.0,
-                          color: Colors.yellow,
+                          decoration: BoxDecoration(
+                              color: dividerColor,
+                              image: DecorationImage(
+                                  fit: BoxFit.fill,
+                                  image: AssetImage(
+                                      "images/experience/jiet.jpg"))),
                         ),
                         const SizedBox(
                           width: 8.0,

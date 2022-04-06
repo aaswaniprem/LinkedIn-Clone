@@ -18,10 +18,38 @@ class TimelinePost {
 List<TimelinePost> timelinelist = [
   TimelinePost(
       name: "Adam Grant",
+      image: "images/timeline/poll.jpg",
+      likedbyUser: "Muskan Agarwal",
+      description:
+          "It's not your job to fix a toxic workplace from the bottom If leaders at the top aren't committed to change, the best way to stay sane is to shield yourself and support your team .Your responsibility is to protect your well-being, your career, and the people you care about.",
+      profilephoto: "images/personprofile/adam1.png"),
+  TimelinePost(
+      name: "Adam Grant",
+      image: "images/timeline/unity.jpg",
+      likedbyUser: "Muskan Agarwal",
+      description:
+          "It's not your job to fix a toxic workplace from the bottom If leaders at the top aren't committed to change, the best way to stay sane is to shield yourself and support your team .Your responsibility is to protect your well-being, your career, and the people you care about.",
+      profilephoto: "images/personprofile/adam1.png"),
+  TimelinePost(
+      name: "Adam Grant",
+      image: "images/timeline/god_jhulelal.jpg",
+      likedbyUser: "Muskan Agarwal",
+      description:
+          "Happy Chetichand to all . \nMay the glory of Jhulelal Sai bring along peace, harmony , & lots of smiles in your life. \n Jai Jhulelal 🙏🙏",
+      profilephoto: "images/personprofile/adam1.png"),
+  TimelinePost(
+      name: "Adam Grant",
       image: "images/timeline/adam1.jpeg",
       likedbyUser: "Muskan Agarwal",
       description:
           "It's not your job to fix a toxic workplace from the bottom If leaders at the top aren't committed to change, the best way to stay sane is to shield yourself and support your team .Your responsibility is to protect your well-being, your career, and the people you care about.",
+      profilephoto: "images/personprofile/adam1.png"),
+  TimelinePost(
+      name: "Adam Grant",
+      image: "images/timeline/god_jhulelal.jpg",
+      likedbyUser: "Muskan Agarwal",
+      description:
+          "Happy Chetichand to all . \nMay the glory of Jhulelal Sai bring along peace, harmony , & lots of smiles in your life. \n Jai Jhulelal 🙏🙏",
       profilephoto: "images/personprofile/adam1.png"),
   TimelinePost(
       name: "Sara Blakely",

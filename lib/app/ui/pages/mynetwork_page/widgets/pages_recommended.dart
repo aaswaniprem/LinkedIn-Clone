@@ -68,6 +68,7 @@ Widget recommededPages() {
                                   ),
                                   child: Container(
                                     decoration: BoxDecoration(
+                                        color: dividerColor,
                                         image: DecorationImage(
                                             image: AssetImage(
                                               pageslist[index].coverPhoto,
@@ -85,7 +86,7 @@ Widget recommededPages() {
                                   right: 45,
                                   child: Container(
                                     decoration: BoxDecoration(
-                                        color: Colors.green,
+                                        color: dividerColor,
                                         image: DecorationImage(
                                             image: AssetImage(
                                               pageslist[index].image,
@@ -145,7 +146,7 @@ Widget recommededPages() {
         ),
         GestureDetector(
           onTap: () {
-            Get.to(SeeMorePages());
+            Get.to(() => SeeMorePages());
           },
           child: Text(
             "See all",
