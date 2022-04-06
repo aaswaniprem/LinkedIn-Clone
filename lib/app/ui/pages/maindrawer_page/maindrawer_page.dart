@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:linkedin_clone/app/data/models/drawermodel.dart';
 import 'package:linkedin_clone/app/ui/global_widgets/widget.dart';
 import 'package:linkedin_clone/app/ui/pages/maindrawer_page/widgets/drawerlist.dart';
+import 'package:linkedin_clone/app/ui/pages/setting_page/setting_page.dart';
 import 'package:linkedin_clone/app/ui/pages/viewprofile_page/viewprofile_page.dart';
 import 'package:linkedin_clone/app/ui/theme/color_constant.dart';
 import 'package:linkedin_clone/app/ui/theme/text_constant.dart';
@@ -70,7 +71,7 @@ class MainDrawerPage extends StatelessWidget {
                                     ),
                                     Row(
                                       children: [
-                                        GestureDetector(
+                                        InkWell(
                                           onTap: () {
                                             Get.to(() => ViewProfilePage());
                                           },
@@ -82,9 +83,14 @@ class MainDrawerPage extends StatelessWidget {
                                         SizedBox(
                                           width: 15.0,
                                         ),
-                                        Text(
-                                          "Settings",
-                                          style: bluetext,
+                                        InkWell(
+                                          onTap: () {
+                                            Get.to(() => SettingPage());
+                                          },
+                                          child: Text(
+                                            "Settings",
+                                            style: bluetext,
+                                          ),
                                         ),
                                       ],
                                     ),

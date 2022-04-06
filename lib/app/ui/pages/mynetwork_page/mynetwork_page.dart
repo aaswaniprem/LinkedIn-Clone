@@ -121,9 +121,15 @@ class MyNetworkPage extends GetView<MyNetworkController> {
             ),
           ),
           dividerwidget(height: 7.0, thickness: 7.0),
-          List4(),
+          List4(
+            text: "People you may know from Spark Foundation",
+            count: 4,
+          ),
           dividerwidget(height: 7.0, thickness: 7.0),
-          List4(),
+          List4(
+            text: "Software Engineer you may know",
+            count: 4,
+          ),
           dividerwidget(height: 7.0, thickness: 7.0),
 
           //recommended pages
@@ -134,6 +140,7 @@ class MyNetworkPage extends GetView<MyNetworkController> {
           //recommended invitations
 
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
                 color: Colors.white,
@@ -142,9 +149,10 @@ class MyNetworkPage extends GetView<MyNetworkController> {
                   padding: const EdgeInsets.only(
                       left: 13.0, right: 13.0, top: 10.0, bottom: 15.0),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "People you may know from JIET Group of Institutions Jodhpur",
+                        "People you may know",
                         style: GoogleFonts.lato(
                             fontSize: 17.0, color: Color(0xff434343)),
                       ),
@@ -298,6 +306,9 @@ class MyNetworkPage extends GetView<MyNetworkController> {
                         style: show_more,
                       ),
                     ),
+                    SizedBox(
+                      height: 15.0,
+                    ),
                   ],
                 ),
               ),
@@ -307,6 +318,11 @@ class MyNetworkPage extends GetView<MyNetworkController> {
             ],
           ),
           dividerwidget(height: 7.0, thickness: 7.0),
+
+          List4(
+            text: "Software Engineer you may know",
+            count: invitationUsers.length,
+          )
         ],
       ),
     );

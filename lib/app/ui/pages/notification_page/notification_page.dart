@@ -20,7 +20,9 @@ class NotificationPage extends GetView<NotificationController> {
           itemBuilder: (BuildContext context, int index) {
             return Container(
               decoration: BoxDecoration(
-                  color: notificationColor,
+                  color: notificationsList[index].isRead
+                      ? Colors.white
+                      : notificationColor,
                   border: Border(
                       bottom: BorderSide(width: 1, color: Color(0xffD0DDEA)))),
               child: Padding(
@@ -33,16 +35,12 @@ class NotificationPage extends GetView<NotificationController> {
                       width: 45.0,
                       height: 45.0,
                       decoration: BoxDecoration(
-                        color: const Color(0xff7c94b6),
+                        color: dividerColor,
                         image: DecorationImage(
-                          image: NetworkImage('http://i.imgur.com/QSev0hg.jpg'),
+                          image: AssetImage(notificationsList[index].image),
                           fit: BoxFit.cover,
                         ),
                         borderRadius: BorderRadius.all(Radius.circular(45.0)),
-                        border: Border.all(
-                          color: Colors.red,
-                          width: 1.0,
-                        ),
                       ),
                     ),
                     SizedBox(

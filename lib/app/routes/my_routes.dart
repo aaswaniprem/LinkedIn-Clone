@@ -12,4 +12,5 @@ abstract class Routes {
   static const notification = '/notification';
   static const view_profile = '/view_profile';
   static const landing = '/landing_page';
+  static const splash = '/splash';
 }

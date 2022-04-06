@@ -8,11 +8,16 @@ import 'package:linkedin_clone/app/ui/pages/recommendation_page/recommendation_p
 import 'package:linkedin_clone/app/ui/theme/text_constant.dart';
 
 class List4 extends StatelessWidget {
-  const List4({Key? key}) : super(key: key);
+  final String text;
+  final int count;
+
+  const List4({Key? key, required this.text, required this.count})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
           color: Colors.white,
@@ -21,9 +26,10 @@ class List4 extends StatelessWidget {
             padding: const EdgeInsets.only(
                 left: 13.0, right: 13.0, top: 10.0, bottom: 15.0),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "People you may know from JIET Group of Institutions Jodhpur",
+                  text,
                   style: GoogleFonts.lato(
                       fontSize: 17.0, color: Color(0xff434343)),
                 ),
@@ -42,7 +48,7 @@ class List4 extends StatelessWidget {
                   crossAxisCount: 2,
                   shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),
-                  itemCount: 4,
+                  itemCount: count,
                   crossAxisSpacing: 8,
                   mainAxisSpacing: 10,
                   itemBuilder: (context, index) {

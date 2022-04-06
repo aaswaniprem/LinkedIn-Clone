@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: Routes.landing,
+      initialRoute: Routes.splash,
       theme: ThemeData(
           brightness: Brightness.light,
           primaryTextTheme:

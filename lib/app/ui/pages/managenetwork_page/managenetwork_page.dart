@@ -10,11 +10,17 @@ class ManageNetworkPage extends GetView<ManageNetworkController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 1,
         backgroundColor: Colors.white,
+        elevation: 1,
         title: Text(
-          'ManageNetworkPage',
-          style: TextStyle(color: Colors.black),
+          'Manage my Network',
+          style: TextStyle(
+              fontWeight: FontWeight.w600, fontSize: 20.0, color: Colors.black),
+        ),
+        automaticallyImplyLeading: false,
+        leading: Icon(
+          Icons.arrow_back,
+          color: reationColor,
         ),
       ),
       body: ListView.builder(

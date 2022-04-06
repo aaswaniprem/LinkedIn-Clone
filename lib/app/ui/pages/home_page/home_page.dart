@@ -27,11 +27,7 @@ class HomePage extends GetView<HomeController> {
               shrinkWrap: true,
               physics: NeverScrollableScrollPhysics(),
               itemBuilder: (BuildContext context, int index) {
-                return timelinePostBox(
-                    name: timelinelist[index].name,
-                    description: timelinelist[index].description,
-                    imagepath: timelinelist[index].image,
-                    profilePhoto: timelinelist[index].profilephoto);
+                return timelinePostBox(timelinelist[index]);
               },
             ),
           ],

@@ -24,7 +24,51 @@ class ViewProfilePage extends GetView<ViewProfileController> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        elevation: 1,
+        elevation: 0,
+        leading: Icon(
+          Icons.arrow_back,
+          color: reationColor,
+        ),
+        title: Center(
+          child: Container(
+            decoration: BoxDecoration(
+                color: search, borderRadius: BorderRadius.circular(5.0)),
+            height: 40.0,
+            width: double.infinity,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 10.0),
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.search,
+                    color: grey,
+                  ),
+                  SizedBox(
+                    width: 5.0,
+                  ),
+                  Text(
+                    "Prem Aaswani",
+                    style: GoogleFonts.openSans(color: grey, fontSize: 17.0),
+                  )
+                ],
+              ),
+            ),
+          ),
+        ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 10.0),
+            child: IconButton(
+              onPressed: () {
+                // Get.to(MessagesPage());
+              },
+              icon: Icon(
+                Icons.settings,
+                color: grey2,
+              ),
+            ),
+          )
+        ],
       ),
       body: SafeArea(
         child: ListView(

@@ -20,6 +20,8 @@ TextStyle monsterrat14 =
 TextStyle lato17 =
     GoogleFonts.lato(fontSize: 17.0, fontWeight: FontWeight.w600);
 
+TextStyle lato17black = GoogleFonts.lato(
+    fontWeight: FontWeight.bold, color: Colors.black, fontSize: 17.0);
 //lato14grey
 TextStyle lato14grey = GoogleFonts.lato(
   color: Color(0xff303030),

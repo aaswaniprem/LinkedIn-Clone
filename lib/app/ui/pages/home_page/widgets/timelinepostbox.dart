@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:linkedin_clone/app/data/models/timelinepostmodel.dart';
 import 'package:linkedin_clone/app/ui/global_widgets/reactionbox.dart';
 import 'package:linkedin_clone/app/ui/global_widgets/widget.dart';
 import 'package:linkedin_clone/app/ui/pages/detailpost_page/detailpost_page.dart';
@@ -11,11 +12,7 @@ import '../../../theme/color_constant.dart';
 
 final iconsize = 18.0;
 
-Widget timelinePostBox(
-    {required String name,
-    required String imagepath,
-    required String description,
-    required String profilePhoto}) {
+Widget timelinePostBox(TimelinePost post) {
   final tabtext = 13.0;
   final Color tabtextstyle = reationColor;
   return Container(
@@ -39,7 +36,7 @@ Widget timelinePostBox(
                       Row(
                         children: [
                           // Image.asset("images/reactionicon/like.png"),
-                          Text("Souvik Banerjee", style: lato17),
+                          Text(post.likedbyUser, style: lato17),
                           SizedBox(
                             width: 8.0,
                           ),
@@ -55,8 +52,8 @@ Widget timelinePostBox(
                 ),
               ),
               Divider(
-                thickness: 1.8,
-                height: 1.8,
+                thickness: 1,
+                height: 1,
                 color: divider,
               ),
               SizedBox(
@@ -72,7 +69,8 @@ Widget timelinePostBox(
                         shape: BoxShape.circle,
                         color: reationColor,
                         image: DecorationImage(
-                            image: AssetImage(profilePhoto), fit: BoxFit.fill)),
+                            image: AssetImage(post.profilephoto),
+                            fit: BoxFit.fill)),
                     // child: Padding(
                     //   padding: const EdgeInsets.all(8.0),
                     //   child: Icon(
@@ -90,14 +88,14 @@ Widget timelinePostBox(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Text(
-                          name,
+                          post.name,
                           style: lato17,
                         ),
                         SizedBox(
                           height: 3.0,
                         ),
                         Text(
-                          "Founder & CEO at Generic Aadhaar | Managing Director at Swastya Lifestyle",
+                          post.profession,
                           style: GoogleFonts.lato(
                               color: reationColor, fontSize: 13.0),
                           maxLines: 1,
@@ -131,7 +129,7 @@ Widget timelinePostBox(
                 height: 15.0,
               ),
               ReadMoreText(
-                description,
+                post.description,
                 trimLines: 2,
                 style:
                     person_desc.copyWith(fontSize: 14.0, color: Colors.black),
@@ -146,7 +144,7 @@ Widget timelinePostBox(
         SizedBox(
           height: 15.0,
         ),
-        Image(image: AssetImage(imagepath))
+        Image(image: AssetImage(post.image))
         // Container(
         //     // height: Get.height * 0.4,
         //     width: Get.width,

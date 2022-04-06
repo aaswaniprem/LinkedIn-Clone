@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:linkedin_clone/app/data/models/invitationsmodel.dart';
 import 'package:linkedin_clone/app/ui/global_widgets/network_item.dart';
 import 'package:linkedin_clone/app/ui/theme/color_constant.dart';
@@ -34,7 +35,8 @@ class RecommendationPage extends GetView<RecommendationController> {
             children: [
               Text(
                 "People you may know from JIET Group of Institutions Jodhpur",
-                style: TextStyle(fontSize: 19.0),
+                style:
+                    GoogleFonts.lato(fontSize: 17.0, color: Color(0xff434343)),
               ),
               SizedBox(
                 height: 16.0,

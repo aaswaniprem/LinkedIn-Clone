@@ -79,7 +79,7 @@ class NetworkItem extends StatelessWidget {
               padding: const EdgeInsets.only(left: 13.0, right: 13.0),
               child: Column(
                 children: [
-                  Text("Arpita Sharma",
+                  Text(name,
                       style: GoogleFonts.lato(
                           fontSize: 17.0, fontWeight: FontWeight.w600)),
                   SizedBox(

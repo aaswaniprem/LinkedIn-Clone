@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:linkedin_clone/app/data/models/invitationsmodel.dart';
 import 'package:linkedin_clone/app/data/models/pagesmodel.dart';
 import 'package:linkedin_clone/app/ui/global_widgets/network_item.dart';
@@ -33,10 +34,12 @@ class SeeMorePages extends GetView<RecommendationController> {
           padding: const EdgeInsets.only(
               top: 10.0, left: 13.0, right: 13.0, bottom: 10.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "People you may know from JIET Group of Institutions Jodhpur",
-                style: TextStyle(fontSize: 19.0),
+                "Recommended pages for you",
+                style:
+                    GoogleFonts.lato(fontSize: 17.0, color: Color(0xff434343)),
               ),
               SizedBox(
                 height: 16.0,

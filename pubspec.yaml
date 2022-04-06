@@ -42,6 +42,7 @@ dependencies:
   flutter_reaction_button: ^2.0.0+2
   flutter_feed_reaction: ^0.0.3
   custom_line_indicator_bottom_navbar: ^0.0.8
+  flutter_svg: ^1.0.3
 
 
 dev_dependencies:

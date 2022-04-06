@@ -130,7 +130,7 @@ Widget recommededPages() {
                               borderRadius: BorderRadius.circular(20.0)),
                           child: Center(
                             child: Text(
-                              "Connect",
+                              "Follow",
                               style: bluetext.copyWith(fontSize: 16.0),
                             ),
                           ),

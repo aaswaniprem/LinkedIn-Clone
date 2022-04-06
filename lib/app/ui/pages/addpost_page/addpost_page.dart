@@ -31,6 +31,10 @@ class _AddPostPageState extends State<AddPostPage> {
             'Share Post',
             style: TextStyle(color: Colors.black),
           ),
+          leading: Icon(
+            Icons.arrow_back,
+            color: reationColor,
+          ),
         ),
         body: Container(
           height: Get.height,
